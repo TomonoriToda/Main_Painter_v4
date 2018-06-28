@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -15,11 +16,29 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -30,6 +49,8 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity{
+
+    final byte[] bByte = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +84,8 @@ public class MainActivity extends AppCompatActivity{
         bt_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onClick1(view);
-                onClick2(view);
+                run1(findViewById(R.id.canvasView));
+                run2(findViewById(R.id.canvasView2));
 
             }
 
@@ -72,6 +93,14 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
+
+    //Bitmapからbyte[]に変換
+    public static byte[] aByte(Bitmap bmp){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] bytes = baos.toByteArray();
+        return bytes;
+    }
 
 
     // スクリーンショットを取得する
@@ -91,8 +120,8 @@ public class MainActivity extends AppCompatActivity{
         switch (v.getId()) {
             case R.id.Button_Save:
                 saveCapture(findViewById(R.id.canvasView), file);
-
         }
+
     }
     public void onClick2(View v) {
         final Date date = new Date(System.currentTimeMillis());
@@ -129,8 +158,37 @@ public class MainActivity extends AppCompatActivity{
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////
-    //  データベース接続  画像送信（仮）
+    //  HTTP通信 AsyncTask
     ////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void run1(View view){
+        Bitmap bitmap= getViewCapture(view);
+        Bitmap bmp = bitmap;
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index.php", bmp));
+    }
+
+    public void run2(View view){
+        Bitmap bitmap= getViewCapture(view);
+        Bitmap bmp = bitmap;
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index2.php", bmp));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
 
