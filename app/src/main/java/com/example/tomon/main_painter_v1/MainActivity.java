@@ -1,7 +1,12 @@
 package com.example.tomon.main_painter_v1;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
@@ -9,9 +14,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -44,16 +54,17 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     final byte[] bByte = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -86,7 +97,6 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 run1(findViewById(R.id.canvasView));
                 run2(findViewById(R.id.canvasView2));
-
             }
 
 
@@ -95,7 +105,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     //Bitmapからbyte[]に変換
-    public static byte[] aByte(Bitmap bmp){
+    public static byte[] aByte(Bitmap bmp) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
         byte[] bytes = baos.toByteArray();
@@ -123,6 +133,7 @@ public class MainActivity extends AppCompatActivity{
         }
 
     }
+
     public void onClick2(View v) {
         final Date date = new Date(System.currentTimeMillis());
         final File file = new File(Environment.getExternalStorageDirectory() + "/Download/" + "paint2" + ".png");
@@ -156,39 +167,21 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
-
     //////////////////////////////////////////////////////////////////////////////////////////////
     //  HTTP通信 AsyncTask
     ////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void run1(View view){
-        Bitmap bitmap= getViewCapture(view);
+    public void run1(View view) {
+        Bitmap bitmap = getViewCapture(view);
         Bitmap bmp = bitmap;
-        new PostBmpAsyncHttpRequest(this).execute(new Param("http://172.16.31.18/index.php", bmp));
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index.php", bmp));
     }
 
-    public void run2(View view){
-        Bitmap bitmap= getViewCapture(view);
+    public void run2(View view) {
+        Bitmap bitmap = getViewCapture(view);
         Bitmap bmp = bitmap;
-        new PostBmpAsyncHttpRequest(this).execute(new Param("http://172.16.31.18/index2.php", bmp));
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index2.php", bmp));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
-
 

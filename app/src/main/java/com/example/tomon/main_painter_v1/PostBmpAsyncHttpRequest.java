@@ -23,6 +23,7 @@ public class PostBmpAsyncHttpRequest extends AsyncTask<Param, Void, String> {
         mActivity = activity;
     }
 
+
     @Override
     protected String doInBackground(Param... params) {
         Param param = params[0];

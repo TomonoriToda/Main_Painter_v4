@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Paint_Top" android:screenOrientation="portrait"/>
+        <activity android:name=".WebForm" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

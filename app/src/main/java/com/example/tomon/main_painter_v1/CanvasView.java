@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Environment;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -108,6 +109,18 @@ public class CanvasView extends View {
     //======================================================================================
     public void allDelete() {
         pathList.clear();   // リストが保持しているPathのインスタンスを全て削除
+    }
+
+    //バックボタンが押されたら、描いたデータを消す
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            pathList.clear();
+            return false;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 
 

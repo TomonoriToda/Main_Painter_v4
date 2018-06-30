@@ -22,7 +22,7 @@
     <com.example.tomon.main_painter_v1.CanvasView
         android:id="@+id/canvasView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="360dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@android:color/background_light" />
@@ -30,7 +30,7 @@
     <com.example.tomon.main_painter_v1.CanvasView
         android:id="@+id/canvasView2"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="360dp"
         android:layout_above="@+id/clear_button2"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="-2dp"
@@ -39,27 +39,30 @@
     <Button
         android:id="@+id/clear_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/canvasView"
-        android:text="CLEAR" />
+        android:layout_marginTop="-6dp"
+        android:text="問題の絵を消す"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/clear_button2"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="CLEAR" />
+        android:text="答えを消す"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/Button_Save"
-        android:layout_width="127dp"
+        android:layout_width="447dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:text="(仮)確認画面へ" />
+        android:text="このボタンを押すと、描いた絵が公開されます"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/mondai"
