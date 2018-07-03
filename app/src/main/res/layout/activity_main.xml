@@ -57,12 +57,12 @@
 
     <Button
         android:id="@+id/Button_Save"
-        android:layout_width="447dp"
+        android:layout_width="298dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:text="このボタンを押すと、描いた絵が公開されます"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/mondai"
@@ -83,6 +83,15 @@
         android:layout_below="@+id/clear_button"
         android:text="答え"
         android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button_ホームへ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/clear_button2"
+        android:text="ホームへ戻る"
+        android:textSize="18sp" />
 
     <!-- 追加：ここまで  -->
 

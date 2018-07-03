@@ -62,12 +62,11 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="307dp"
+        android:layout_width="311dp"
         android:layout_height="192dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="間違えてしまったら　　　問題を消す場合は「真ん中のボタン」　　　　　　　答えを消したい場合は「左下のボタン」を押してください。"
+        android:text="問題を消す場合は「真ん中のボタン」　　　　　　　答えを消したい場合は　　　「左下のボタン」を押してください。"
         android:textAlignment="viewStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

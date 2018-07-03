@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
-
 public class Paint_Top extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
