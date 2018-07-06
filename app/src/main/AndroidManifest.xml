@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,6 +26,9 @@
         <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Paint_Top" android:screenOrientation="portrait"/>
         <activity android:name=".WebForm" android:screenOrientation="portrait"/>
+        <activity android:name=".QR.QrCodeReader" android:screenOrientation="portrait"/>
+        <activity android:name=".QR.qr1" android:screenOrientation="landscape"/>
+        <activity android:name=".QR.qr1_ans" android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

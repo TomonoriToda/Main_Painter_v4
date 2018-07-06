@@ -16,7 +16,7 @@ public class WebForm extends AppCompatActivity {
 
             WebView myWebView = (WebView) findViewById(R.id.webView);
             myWebView.setWebViewClient(new WebViewClient());
-            myWebView.loadUrl("http://192.168.0.153/paint.php");
+            myWebView.loadUrl("http://172.16.31.18:8080/paint.php");
 
             Button main = (Button)findViewById(R.id.button_メインへ);
 

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Main_Painter_v1</string>
 
+    <string name="ng">はずれー</string>
+    <string name="ok">あたり</string>
+
+    <string name="back">最初へ戻る</string>
+
 </resources>
+

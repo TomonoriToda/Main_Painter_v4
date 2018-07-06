@@ -2,16 +2,24 @@ package com.example.tomon.main_painter_v1.MainScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tomon.main_painter_v1.Paint_Top;
+import com.example.tomon.main_painter_v1.QR.QrCodeReader;
 import com.example.tomon.main_painter_v1.R;
 import com.example.tomon.main_painter_v1.WebForm;
 
 public class main extends AppCompatActivity {
+
+    int x=0;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.top);
@@ -24,10 +32,14 @@ public class main extends AppCompatActivity {
 
 
 
+
         QR_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // インテントのインスタンス生成
+                Intent intent = new Intent(main.this, QrCodeReader.class);
+                // 次画面のアクティビティ起動
+                startActivity(intent);
             }
         });
 
@@ -64,8 +76,6 @@ public class main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
     //↓端末のバックボタンを無効にする処理↓
@@ -77,5 +87,17 @@ public class main extends AppCompatActivity {
         }
 
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        Toast.makeText(getBaseContext(),"起動",Toast.LENGTH_SHORT).show();
+        if (requestCode == 1){
+            Toast.makeText(getBaseContext(),"if文入った",Toast.LENGTH_SHORT).show();
+            TextView tx = (TextView)findViewById(R.id.textView11);//カウント
+           // x+=1;
+           // String s = Integer.toString(x);
+            tx.setText("3");
+        }
     }
 }

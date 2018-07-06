@@ -143,13 +143,13 @@ public class MainActivity extends AppCompatActivity {
     public void run1(View view) {
         Bitmap bitmap = getViewCapture(view);
         Bitmap bmp = bitmap;
-        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index.php", bmp));
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://172.16.31.18:8080/index.php", bmp));
     }
 
     public void run2(View view) {
         Bitmap bitmap = getViewCapture(view);
         Bitmap bmp = bitmap;
-        new PostBmpAsyncHttpRequest(this).execute(new Param("http://192.168.0.153/index2.php", bmp));
+        new PostBmpAsyncHttpRequest(this).execute(new Param("http://172.16.31.18:8080/index2.php", bmp));
     }
 
 }
