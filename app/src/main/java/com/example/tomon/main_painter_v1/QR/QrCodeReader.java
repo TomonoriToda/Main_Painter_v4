@@ -27,21 +27,52 @@ public class QrCodeReader extends AppCompatActivity {
         mBarcodeView.decodeSingle(new BarcodeCallback() {
             @Override
             public void barcodeResult(BarcodeResult barcodeResult) {
+                //読み取ったQRの文字を比較して、問題に移動
                 if(barcodeResult.getText().equals("qr1")){
                     Intent quiz = new Intent(QrCodeReader.this,qr1.class);
+                    quiz.putExtra("Question","1");//何の問題か
+                    quiz.putExtra("Q","わしには多くの孫がいるが、さて何歳でしょうか？");//問題
+                    quiz.putExtra("1","100歳");//回答１
+                    quiz.putExtra("2","60歳");//回答２
+                    quiz.putExtra("3","0歳");//回答３
+                    quiz.putExtra("4","111歳");//回答４
                     startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr2")) {
-                   // Intent quiz = new Intent(QrCodeReader.this,qr2.class);
-                   // startActivity(quiz);
+                   Intent quiz = new Intent(QrCodeReader.this,qr1.class);
+                    quiz.putExtra("Question","2");//何の問題か
+                    quiz.putExtra("Q","");//問題
+                    quiz.putExtra("1","");//回答１
+                    quiz.putExtra("2","");//回答２
+                    quiz.putExtra("3","");//回答３
+                    quiz.putExtra("4","");//回答４
+                   startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr3")) {
-                   // Intent quiz = new Intent(QrCodeReader.this,qr3.class);
-                   // startActivity(quiz);
+                   Intent quiz = new Intent(QrCodeReader.this,qr1.class);
+                    quiz.putExtra("Question","3");//何の問題か
+                    quiz.putExtra("Q","");//問題
+                    quiz.putExtra("1","");//回答１
+                    quiz.putExtra("2","");//回答２
+                    quiz.putExtra("3","");//回答３
+                    quiz.putExtra("4","");//回答４
+                   startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr4")){
-                  //  Intent quiz = new Intent(QrCodeReader.this,qr4.class);
-                   // startActivity(quiz);
+                   Intent quiz = new Intent(QrCodeReader.this,qr1.class);
+                    quiz.putExtra("Question","4");//何の問題か
+                    quiz.putExtra("Q","");//問題
+                    quiz.putExtra("1","");//回答１
+                    quiz.putExtra("2","");//回答２
+                    quiz.putExtra("3","");//回答３
+                    quiz.putExtra("4","");//回答４
+                   startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr5")){
-                  //  Intent quiz = new Intent(QrCodeReader.this,qr5.class);
-                  //  startActivity(quiz);
+                   Intent quiz = new Intent(QrCodeReader.this,qr1.class);
+                    quiz.putExtra("Question","5");//何の問題か
+                    quiz.putExtra("Q","");//問題
+                    quiz.putExtra("1","");//回答１
+                    quiz.putExtra("2","");//回答２
+                    quiz.putExtra("3","");//回答３
+                    quiz.putExtra("4","");//回答４
+                   startActivity(quiz);
                 }else{
                     finish();
                 }

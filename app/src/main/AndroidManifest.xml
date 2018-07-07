@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainScreen.main" android:screenOrientation="landscape">
+        <activity android:name=".MainScreen.main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +29,8 @@
         <activity android:name=".QR.QrCodeReader" android:screenOrientation="portrait"/>
         <activity android:name=".QR.qr1" android:screenOrientation="landscape"/>
         <activity android:name=".QR.qr1_ans" android:screenOrientation="landscape"/>
+        <activity android:name=".QR.stamp" android:screenOrientation="landscape"/>
+        <activity android:name=".QR.qr1_ans_ng" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

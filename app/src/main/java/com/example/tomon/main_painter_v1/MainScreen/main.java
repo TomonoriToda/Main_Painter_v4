@@ -76,6 +76,20 @@ public class main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        Button test = (Button)findViewById(R.id.test);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // インテントのインスタンス生成
+                Intent intent = new Intent(main.this, QrCodeReader.class);
+                // 次画面のアクティビティ起動
+                startActivity(intent);
+            }
+        });
     }
 
     //↓端末のバックボタンを無効にする処理↓
@@ -100,4 +114,5 @@ public class main extends AppCompatActivity {
             tx.setText("3");
         }
     }
+
 }

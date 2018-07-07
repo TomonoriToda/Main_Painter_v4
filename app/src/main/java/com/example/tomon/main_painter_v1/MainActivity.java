@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //-- Button関連
         Button bt = (Button) findViewById(R.id.clear_button);
         Button bt2 = (Button) findViewById(R.id.clear_button2);
-        Button bt_home = (Button)findViewById(R.id.button_ホームへ);
+        Button bt_home = (Button)findViewById(R.id.button_home);
 
         //- 動作設定
         bt.setOnClickListener(new View.OnClickListener() {
