@@ -47,8 +47,8 @@ public class qr1_ans_ng extends AppCompatActivity {
         }else if(q.equals("2")){
             Intent quiz = new Intent(qr1_ans_ng.this,qr1.class);
             quiz.putExtra("Question","2");//何の問題か
-            quiz.putExtra("Q","");//問題
-            quiz.putExtra("1","");//回答１
+            quiz.putExtra("Q","２の問題");//問題
+            quiz.putExtra("1","あ");//回答１
             quiz.putExtra("2","");//回答２
             quiz.putExtra("3","");//回答３
             quiz.putExtra("4","");//回答４

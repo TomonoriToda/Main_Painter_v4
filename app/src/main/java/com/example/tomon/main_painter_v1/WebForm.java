@@ -20,6 +20,7 @@ public class WebForm extends AppCompatActivity {
             myWebView.loadUrl("http://172.16.31.18:8080/paint.php");
 
             Button main = (Button)findViewById(R.id.button_メインへ);
+            Button web = findViewById(R.id.button_絵を見に行く);
 
             main.setOnClickListener(new View.OnClickListener() {
                 @Override

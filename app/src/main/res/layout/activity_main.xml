@@ -31,14 +31,13 @@
         android:id="@+id/canvasView2"
         android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:layout_above="@+id/clear_button2"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="-2dp"
+        android:layout_below="@+id/clear_button"
         android:background="@android:color/background_light" />
 
     <Button
         android:id="@+id/clear_button"
-        android:layout_width="match_parent"
+        android:layout_width="297dp"
         android:layout_height="66dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/canvasView"
@@ -48,10 +47,10 @@
 
     <Button
         android:id="@+id/clear_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+        android:layout_width="301dp"
+        android:layout_height="64dp"
+        android:layout_alignBottom="@+id/clear_button"
+        android:layout_toEndOf="@+id/clear_button"
         android:text="答えを消す"
         android:textSize="24sp" />
 
@@ -87,11 +86,21 @@
     <Button
         android:id="@+id/button_home"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/clear_button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
         android:text="ホームへ戻る"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_絵を見に行く"
+        android:layout_width="173dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/button_home"
+        android:text="絵を見に行く"
+        android:textSize="24sp" />
 
     <!-- 追加：ここまで  -->
 

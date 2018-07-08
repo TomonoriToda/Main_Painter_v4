@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
         final CanvasView cv2 = (CanvasView) findViewById(R.id.canvasView2);
         final Button bt_save = (Button) findViewById(R.id.Button_Save);
 
+
         //-- Button関連
         Button bt = (Button) findViewById(R.id.clear_button);
         Button bt2 = (Button) findViewById(R.id.clear_button2);
         Button bt_home = (Button)findViewById(R.id.button_home);
+        Button web = findViewById(R.id.button_絵を見に行く);
 
         //- 動作設定
         bt.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, main.class);
                 // 次画面のアクティビティ起動
+                startActivity(intent);
+            }
+        });
+
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,WebForm.class);
                 startActivity(intent);
             }
         });
