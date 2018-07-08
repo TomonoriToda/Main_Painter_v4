@@ -3,6 +3,7 @@ package com.example.tomon.main_painter_v1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -41,4 +42,15 @@ public class WebForm extends AppCompatActivity {
                 }
             });
         }
+
+    //↓端末のバックボタンを無効にする処理↓
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return false;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 }

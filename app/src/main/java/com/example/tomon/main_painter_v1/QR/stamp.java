@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,7 +15,7 @@ import com.example.tomon.main_painter_v1.R;
 
 public class stamp extends AppCompatActivity {
 
-    int Q1=0,Q2=0,Q3=0,Q4=0,Q5=0,Qex=0;
+    static boolean Q1=false,Q2=false,Q3=false,Q4=false,Q5=false,Qex=false;
 
 
 
@@ -24,33 +25,73 @@ public class stamp extends AppCompatActivity {
         setContentView(R.layout.answer_stamp);
 
 
+
         //Intentでもらった値を比較して、スタンプ（画像）をセット
         Intent intent = getIntent();
         String x = intent.getStringExtra("question");
         //Toast.makeText(getBaseContext(),x+"",Toast.LENGTH_SHORT).show();
 
-        if (x.equals("1")){
+        switch (x) {
+            case "1": {
+                ImageView image = findViewById(R.id.Q1_stamp);
+                image.setImageResource(R.drawable.itarusukun);
+                Q1 = true;
+                break;
+            }
+            case "2": {
+                ImageView image = findViewById(R.id.Q2_stamp);
+                image.setImageResource(R.drawable.itarusukun);
+                Q2 = true;
+                break;
+            }
+            case "3": {
+                ImageView image = findViewById(R.id.Q3_stamp);
+                image.setImageResource(R.drawable.itarusukun);
+                Q3 = true;
+                break;
+            }
+            case "4": {
+                ImageView image = findViewById(R.id.Q4_stamp);
+                image.setImageResource(R.drawable.itarusukun);
+                Q4 = true;
+                break;
+            }
+            case "5": {
+                ImageView image = findViewById(R.id.Q5_stamp);
+                image.setImageResource(R.drawable.itarusukun);
+                Q5 = true;
+                break;
+            }
+        }
+        if(Q1){
             ImageView image = findViewById(R.id.Q1_stamp);
             image.setImageResource(R.drawable.itarusukun);
-            Q1=1;
-        }else if(x.equals("2")){
+        }
+        if(Q2){
             ImageView image = findViewById(R.id.Q2_stamp);
             image.setImageResource(R.drawable.itarusukun);
         }
-
-
-        //セットした画像を保持する
-        if(Q1 == 1){
-            ImageView image1 = findViewById(R.id.Q1_stamp);
-            image1.setImageResource(R.drawable.itarusukun);
+        if(Q3){
+            ImageView image = findViewById(R.id.Q3_stamp);
+            image.setImageResource(R.drawable.itarusukun);
+        }
+        if(Q4){
+            ImageView image = findViewById(R.id.Q4_stamp);
+            image.setImageResource(R.drawable.itarusukun);
+        }
+        if(Q5){
+            ImageView image = findViewById(R.id.Q5_stamp);
+            image.setImageResource(R.drawable.itarusukun);
         }
 
 
+
+
         //全問正解したら、EX問題出題！
-        if (1==(Q1&Q2&Q3&Q4&Q5)){
+        if ((Q1 & Q2 & Q3 & Q4 & Q5)){
             Intent quiz = new Intent(stamp.this,qr1.class);
             quiz.putExtra("Question","ex");//何の問題か
-            quiz.putExtra("Q","");//問題
+            quiz.putExtra("Q","EX問題!!");//問題
             quiz.putExtra("1","");//回答１
             quiz.putExtra("2","");//回答２
             quiz.putExtra("3","");//回答３
@@ -82,6 +123,14 @@ public class stamp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //↓端末のバックボタンを無効にする処理↓
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        return keyCode != KeyEvent.KEYCODE_BACK && super.onKeyDown(keyCode, event);
 
     }
 

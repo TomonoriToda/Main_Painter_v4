@@ -3,6 +3,7 @@ package com.example.tomon.main_painter_v1.QR;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,27 +34,61 @@ public class qr1 extends AppCompatActivity{
 
 
         //Intentで持ってきた値を比較して、その問題と回答をセットする
-        if (Qestion_number.equals("1")){
-            setText(title,A1,A2,A3,A4);
-            //正解か不正解　判定
-            btClick1 b = new btClick1();
-            ans1.setOnClickListener(b);
-            ans2.setOnClickListener(b);
-            ans3.setOnClickListener(b);
-            ans4.setOnClickListener(b);
-
-
-
-        }else if (Qestion_number.equals("2")){
-            setText(title,A1,A2,A3,A4);
-        }else if (Qestion_number.equals("3")){
-            setText(title,A1,A2,A3,A4);
-        }else if (Qestion_number.equals("4")){
-            setText(title,A1,A2,A3,A4);
-        }else if (Qestion_number.equals("5")){
-            setText(title,A1,A2,A3,A4);
-        }else if (Qestion_number.equals("ex")){
-            setText(title,A1,A2,A3,A4);
+        switch (Qestion_number) {
+            case "1": {
+                setText(title, A1, A2, A3, A4);
+                btClick1 b = new btClick1();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
+            case "2": {
+                setText(title, A1, A2, A3, A4);
+                btClick2 b = new btClick2();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
+            case "3": {
+                setText(title, A1, A2, A3, A4);
+                btClick3 b = new btClick3();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
+            case "4": {
+                setText(title, A1, A2, A3, A4);
+                btClick4 b = new btClick4();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
+            case "5": {
+                setText(title, A1, A2, A3, A4);
+                btClick5 b = new btClick5();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
+            case "ex": {
+                setText(title, A1, A2, A3, A4);
+                btClickex b = new btClickex();
+                ans1.setOnClickListener(b);
+                ans2.setOnClickListener(b);
+                ans3.setOnClickListener(b);
+                ans4.setOnClickListener(b);
+                break;
+            }
         }
 
     }
@@ -83,9 +118,11 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
+                    NG.putExtra("question","1");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
+                    NG.putExtra("question","1");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
@@ -93,6 +130,7 @@ public class qr1 extends AppCompatActivity{
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
+                    NG.putExtra("question","1");
                     startActivity(NG);
                     break;
             }
@@ -108,15 +146,19 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
+                    NG.putExtra("question","2");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
+                    NG.putExtra("question","2");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
+                    OK.putExtra("question","2");
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
+                    NG.putExtra("question","2");
                     startActivity(NG);
                     break;
             }
@@ -132,15 +174,19 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
+                    NG.putExtra("question","3");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
+                    NG.putExtra("question","3");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
+                    OK.putExtra("question","3");
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
+                    NG.putExtra("question","3");
                     startActivity(NG);
                     break;
             }
@@ -156,15 +202,19 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
+                    NG.putExtra("question","4");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
+                    NG.putExtra("question","4");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
+                    OK.putExtra("question","4");
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
+                    NG.putExtra("question","4");
                     startActivity(NG);
                     break;
             }
@@ -180,18 +230,82 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
+                    NG.putExtra("question","5");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
+                    NG.putExtra("question","5");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
+                    OK.putExtra("question","5");
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
+                    NG.putExtra("question","5");
                     startActivity(NG);
                     break;
             }
         }
     }
+
+    //問題EXの正答
+    private class btClickex implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            int id = v.getId();
+            Intent OK = new Intent(qr1.this, qr1_ans.class);
+            Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
+            switch (id) {
+                case R.id.ans_1:
+                    NG.putExtra("question","5");
+                    startActivity(NG);
+                    break;
+                case R.id.ans_2:
+                    NG.putExtra("question","5");
+                    startActivity(NG);
+                    break;
+                case R.id.ans_3:
+                    OK.putExtra("question","5");
+                    startActivity(OK);
+                    break;
+                case R.id.ans_4:
+                    NG.putExtra("question","5");
+                    startActivity(NG);
+                    break;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //↓端末のバックボタンを無効にする処理↓
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return false;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+
 }

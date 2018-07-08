@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -150,6 +151,17 @@ public class MainActivity extends AppCompatActivity {
         Bitmap bitmap = getViewCapture(view);
         Bitmap bmp = bitmap;
         new PostBmpAsyncHttpRequest(this).execute(new Param("http://172.16.31.18:8080/index2.php", bmp));
+    }
+
+    //↓端末のバックボタンを無効にする処理↓
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return false;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 
 }

@@ -4,6 +4,9 @@ package com.example.tomon.main_painter_v1.QR;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.tomon.main_painter_v1.MainScreen.main;
@@ -23,6 +26,15 @@ public class QrCodeReader extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ql_main);
 
+        Button home = findViewById(R.id.button_home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(QrCodeReader.this,main.class);
+                startActivity(intent);
+            }
+        });
+
         mBarcodeView = (CompoundBarcodeView)findViewById(R.id.barcodeView);
         mBarcodeView.decodeSingle(new BarcodeCallback() {
             @Override
@@ -31,11 +43,11 @@ public class QrCodeReader extends AppCompatActivity {
                 if(barcodeResult.getText().equals("qr1")){
                     Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","1");//何の問題か
-                    quiz.putExtra("Q","わしには多くの孫がいるが、さて何歳でしょうか？");//問題
-                    quiz.putExtra("1","100歳");//回答１
-                    quiz.putExtra("2","60歳");//回答２
-                    quiz.putExtra("3","0歳");//回答３
-                    quiz.putExtra("4","111歳");//回答４
+                    quiz.putExtra("Q","ARSコンピュータ専門学校の、'A'は略さないでなんという？");//問題
+                    quiz.putExtra("1","");//回答１
+                    quiz.putExtra("2","職業実践專門課程");//回答２
+                    quiz.putExtra("3","職業実践専門課程");//回答３
+                    quiz.putExtra("4","");//回答４
                     startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr2")) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
@@ -92,5 +104,16 @@ public class QrCodeReader extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         mBarcodeView.pause();
+    }
+
+    //↓端末のバックボタンを無効にする処理↓
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // Disable Back key
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return false;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }

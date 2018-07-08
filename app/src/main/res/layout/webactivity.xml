@@ -9,23 +9,23 @@
     <WebView
         android:id="@+id/webView"
         android:layout_width="585dp"
-        android:layout_height="766dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="831dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_home">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
     </WebView>
 
     <Button
         android:id="@+id/button_メインへ"
-        android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_width="99dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -34,7 +34,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
 
     <Button
         android:id="@+id/button_問題描く"
@@ -47,7 +48,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintHorizontal_bias="0.977"
         app:layout_constraintStart_toEndOf="@+id/button_メインへ"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
