@@ -1,10 +1,75 @@
 <resources>
     <string name="app_name">アルスパンフレットQR</string>
 
-    <string name="ng">はずれー</string>
-    <string name="ok">あたり</string>
+    <string name="menu">マップを表示したいフロアを選んでね！</string>
+    <string name="f1">1F</string>
+    <string name="f2">2F</string>
+    <string name="f3">3F</string>
+    <string name="f4">4F</string>
+    <string name="f5">5F</string>
+    <string name="f6">保育棟</string>
+    <string name="main">フロア選択画面へ</string>
+    <string name="back">戻る</string>
+    <string name="look">詳しく見る</string>
+    <string name="help">ヘルプ画面</string>
+    <string name="help00">ここでは地図アプリの説明をします</string>
+    <string name="help01">①まずはフロア選択画面で見たいフロアを選んでください。選択したフロアのマップが表示されます\n\n
+        ②別のフロアのマップを見たい時は画面下にあるフロア移動ボタンを押すか、画面上部にあるフロア選択画面ボタンを押し、見たいフロアを選んでください。\n\n③マップに上に★マークがある教室には各クラスの出し物があります。
+        ★マークのある教室をタップするとその教室でどんな出し物をやっているのかを見ることができます。\n　　　</string>
+    <string name="help1">★地図アプリの使い方★</string>
+    <string name="cls301">301教室</string>
+    <string name="info301">301教室にはこんな出し物があるよ★</string>
+    <string name="d301_1">・サイバーボッチャー～画像認識で体験型アトラクション!!</string>
+    <string name="info301_1">--簡潔な説明</string>
+    <string name="d301_2">・バーチャル面接を体験しよう!～音声認識を利用した対話システム～</string>
+    <string name="info301_2_2">--簡潔な説明</string>
+    <string name="d301_3">・ゼブラ・クロッシングで教室巡ってクイズに挑戦!～タブレットを使った楠祭ブース案内～</string>
+    <string name="info301_3_3">--簡潔な説明</string>
+    <string name="d301_4">・鉄道のおもちゃを動かそう!～ラズベリーパイで自動運転～</string>
+    <string name="info301_4_4">--簡潔な説明</string>
+    <string name="d301_5">・AI VS 人類 ～スマートスピーカーとしりとり対決～</string>
+    <string name="info301_5_5">--簡潔な説明</string>
 
-    <string name="back">最初へ戻る</string>
+    <string name="cls_2s2">202教室にはこんな出し物があるよ！</string>
+    <string name="d000_1">・infection ～人から人へと乗り移り、自分のルーツを探せ！～</string>
+    <string name="d000_2">・Monde de livre ～魔法の本で地形を操作し、ゴールを目指せ！～</string>
+    <string name="d000_3">・ミラー・リフレクション～暗がりからルートを見つけ出せ！～</string>
+    <string name="d000_4">・ラッシュポイント ～ボード型＆ターン制対戦ゲーム！～</string>
+    <string name="d000_5">・シティハザード ～感染の力を生かしシティを制圧せよ！～</string>
+    <string name="d000_6">・マネーウォリアーズ ～4人で協力して押し寄せる敵を撃退せよ！～</string>
+
+    <string name="cls_2s3">403教室にはこんな出し物があるよ！</string>
+    <string name="d111_1">・ARS工房 ～レーザーカッター加工 デザインフォルダー present!～</string>
+    <string name="d111_2">・VR体験 ～ワクワクサロンワールド～</string>
+
+    <string name="cls_2s4">402教室にはこんな出し物があるよ！</string>
+    <string name="d444_4">・わたしたちのFM！！ ～FM.クマガヤってなぁに？～</string>
+
+    <string name="usatama_2b1">203教室にはこんな出し物があるよ！</string>
+    <string name="b111_1">・うさたまカフェ</string>
+
+    <string name="sugoroku_2b1">302教室にはこんな出し物があるよ！</string>
+    <string name="b111_2">・ビジネスダイスロール </string>
+    <string name="b111_2_2"> ～卵を転がして謎を解け～</string>
+
+    <string name="arsc_2b2">502教室にはこんな出し物があるよ！</string>
+    <string name="b222_1_1">・Yes,アルスクリニック </string>
+    <string name="b222_1_2">～Enjoy☆ロールプレイング～</string>
+
+    <string name="iryoq_2b2">501教室にはこんな出し物があるよ！</string>
+    <string name="b222_2">・さぁやってみよう！ ”Let’s医療クイズ”</string>
+
+    <string name="cls_2w1">K101教室にはこんな出し物があるよ！</string>
+    <string name="w111_1">・演劇オペレッタ『おむすびころりん』</string>
+
+    <string name="cls_gb1">305教室にはこんな出し物があるよ！</string>
+    <string name="g111_1">・わたしたちの母国を紹介します！</string>
+
+    <string name="listm">それぞれの教室にはこんな出し物があるよ☆</string>
+    <string name="list">サイバーボッチャー～画像認識で体験型アトラクション!!</string>
+
+    <string name="usa">う\nさ\nた\nま\n</string>
+    <string name="usa2">大\n・\n集\n・\n合</string>
 
 </resources>
 

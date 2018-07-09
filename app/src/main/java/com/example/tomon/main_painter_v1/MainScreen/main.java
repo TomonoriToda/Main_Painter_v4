@@ -2,19 +2,17 @@ package com.example.tomon.main_painter_v1.MainScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.tomon.main_painter_v1.Paint_Top;
 import com.example.tomon.main_painter_v1.QR.QrCodeReader;
 import com.example.tomon.main_painter_v1.QR.qr1;
 import com.example.tomon.main_painter_v1.R;
 import com.example.tomon.main_painter_v1.WebForm;
+import com.example.tomon.main_painter_v1.map.Map_main;
 
 public class main extends AppCompatActivity {
 
@@ -47,7 +45,10 @@ public class main extends AppCompatActivity {
         map_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // インテントのインスタンス生成
+                Intent intent = new Intent(main.this, Map_main.class);
+                // 次画面のアクティビティ起動
+                startActivity(intent);
             }
         });
 

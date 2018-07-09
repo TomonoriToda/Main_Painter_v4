@@ -31,6 +31,24 @@
         <activity android:name=".QR.qr1_ans" android:screenOrientation="landscape"/>
         <activity android:name=".QR.stamp" android:screenOrientation="landscape"/>
         <activity android:name=".QR.qr1_ans_ng" android:screenOrientation="landscape"/>
+        <activity android:name=".map.Main1Activity"></activity>
+        <activity android:name=".map.Main2Activity"></activity>
+        <activity android:name=".map.MainHActivity"></activity>
+        <activity android:name=".map.Main3Activity"></activity>
+        <activity android:name=".map.Main4Activity"></activity>
+        <activity android:name=".map.Main5Activity"></activity>
+        <activity android:name=".map.MainHelpActivity"></activity>
+        <activity android:name=".map.Main301Activity" />
+        <activity android:name=".map.Main202Activity"/>
+        <activity android:name=".map.Main403Activity"/>
+        <activity android:name=".map.Main402Activity" />
+        <activity android:name=".map.Main203Activity"/>
+        <activity android:name=".map.Main302Activity"/>
+        <activity android:name=".map.Maink101Activity"/>
+        <activity android:name=".map.Main305Activity"/>
+        <activity android:name=".map.Main501Activity"/>
+        <activity android:name=".map.Main502Activity"/>
+        <activity android:name=".map.Map_main"/>
     </application>
 
 </manifest>
