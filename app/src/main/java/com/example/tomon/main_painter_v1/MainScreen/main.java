@@ -95,6 +95,7 @@ public class main extends AppCompatActivity {
                 Intent quiz = new Intent(main.this,qr1.class);
                 quiz.putExtra("Question","1");//何の問題か
                 quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
+                quiz.putExtra("nokori",3);
                 quiz.putExtra("1","7");//回答１
                 quiz.putExtra("2","8");//回答２
                 quiz.putExtra("3","9");//回答３
@@ -109,6 +110,7 @@ public class main extends AppCompatActivity {
                 Intent quiz = new Intent(main.this,qr1.class);
                 quiz.putExtra("Question","2");//何の問題か
                 quiz.putExtra("Q","２問目の問題");//問題
+                quiz.putExtra("nokori",3);
                 quiz.putExtra("1","あ");//回答１
                 quiz.putExtra("2","い");//回答２
                 quiz.putExtra("3","う");//回答３

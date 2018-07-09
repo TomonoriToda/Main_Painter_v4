@@ -43,7 +43,8 @@ public class QrCodeReader extends AppCompatActivity {
                 if(barcodeResult.getText().equals("qr1")){
                     Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","1");//何の問題か
-                    quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
+                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("Q","アルスコンピュータ専門学校の学科コースはいくつあるか？");//問題
                     quiz.putExtra("1","7");//回答１
                     quiz.putExtra("2","8");//回答２
                     quiz.putExtra("3","9");//回答３
@@ -52,6 +53,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr2")) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","2");//何の問題か
+                    quiz.putExtra("nokori",3);
                     quiz.putExtra("Q","");//問題
                     quiz.putExtra("1","");//回答１
                     quiz.putExtra("2","");//回答２
@@ -61,6 +63,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr3")) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","3");//何の問題か
+                    quiz.putExtra("nokori",3);
                     quiz.putExtra("Q","");//問題
                     quiz.putExtra("1","");//回答１
                     quiz.putExtra("2","");//回答２
@@ -70,6 +73,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr4")){
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","4");//何の問題か
+                    quiz.putExtra("nokori",3);
                     quiz.putExtra("Q","");//問題
                     quiz.putExtra("1","");//回答１
                     quiz.putExtra("2","");//回答２
@@ -79,6 +83,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr5")){
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","5");//何の問題か
+                    quiz.putExtra("nokori",3);
                     quiz.putExtra("Q","");//問題
                     quiz.putExtra("1","");//回答１
                     quiz.putExtra("2","");//回答２

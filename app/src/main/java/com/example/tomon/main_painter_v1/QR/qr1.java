@@ -13,6 +13,8 @@ import com.example.tomon.main_painter_v1.MainScreen.main;
 import com.example.tomon.main_painter_v1.R;
 
 public class qr1 extends AppCompatActivity{
+
+    static int mTransitionCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +37,12 @@ public class qr1 extends AppCompatActivity{
 
 
 
+
         //５問の問題と回答をIntent
         Intent intent = getIntent();
         String Qestion_number = intent.getStringExtra("Question");
         String title = intent.getStringExtra("Q");
+        mTransitionCount= intent.getIntExtra("nokori",0);
         String A1 = intent.getStringExtra("1");
         String A2 = intent.getStringExtra("2");
         String A3 = intent.getStringExtra("3");
@@ -58,7 +62,7 @@ public class qr1 extends AppCompatActivity{
         //Intentで持ってきた値を比較して、その問題と回答をセットする
         switch (Qestion_number) {
             case "1": {
-                setText(title, A1, A2, A3, A4);
+                setText(title,mTransitionCount,A1, A2, A3, A4);
                 btClick1 b = new btClick1();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -67,7 +71,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "2": {
-                setText(title, A1, A2, A3, A4);
+                setText(title,mTransitionCount, A1, A2, A3, A4);
                 btClick2 b = new btClick2();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -76,7 +80,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "3": {
-                setText(title, A1, A2, A3, A4);
+                setText(title,mTransitionCount, A1, A2, A3, A4);
                 btClick3 b = new btClick3();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -85,7 +89,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "4": {
-                setText(title, A1, A2, A3, A4);
+                setText(title,mTransitionCount, A1, A2, A3, A4);
                 btClick4 b = new btClick4();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -94,7 +98,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "5": {
-                setText(title, A1, A2, A3, A4);
+                setText(title,mTransitionCount, A1, A2, A3, A4);
                 btClick5 b = new btClick5();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -103,7 +107,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "ex": {
-                setTextEx(titleex,title2Ex,A1ex,A2ex,A3ex,A4ex);
+                setTextEx(titleex,mTransitionCount,title2Ex,A1ex,A2ex,A3ex,A4ex);
                 btClickex b = new btClickex();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -114,15 +118,18 @@ public class qr1 extends AppCompatActivity{
         }
 
     }
+
     //Intentしてきた問題、回答文をTextViewにセット
-    public void setText(String question,String q1,String q2,String q3,String q4){
+    public void setText(String question,Integer i,String q1,String q2,String q3,String q4){
         TextView mondai = findViewById(R.id.textView_問題);
+        TextView nokori = findViewById(R.id.textView_残り回数);
         TextView Q1 = findViewById(R.id.textView_回答1);
         TextView Q2 = findViewById(R.id.textView_回答2);
         TextView Q3 = findViewById(R.id.textView_回答3);
         TextView Q4 = findViewById(R.id.textView_回答4);
 
         mondai.setText(question);
+        nokori.setText(new String(String.valueOf(i)));
         Q1.setText(q1);
         Q2.setText(q2);
         Q3.setText(q3);
@@ -130,9 +137,10 @@ public class qr1 extends AppCompatActivity{
 
     }
 
-    public void setTextEx(String question,String title, String q1,String q2,String q3,String q4){
+    public void setTextEx(String question,Integer i,String title, String q1,String q2,String q3,String q4){
         TextView mondai = findViewById(R.id.textView_問題);
         TextView Title = findViewById(R.id.textView_title);
+        TextView nokori = findViewById(R.id.textView_残り回数);
         TextView Q1 = findViewById(R.id.textView_回答1);
         TextView Q2 = findViewById(R.id.textView_回答2);
         TextView Q3 = findViewById(R.id.textView_回答3);
@@ -140,6 +148,7 @@ public class qr1 extends AppCompatActivity{
 
         mondai.setText(question);
         Title.setText(title);
+        nokori.setText(i);
         Q1.setText(q1);
         Q2.setText(q2);
         Q3.setText(q3);
@@ -157,10 +166,12 @@ public class qr1 extends AppCompatActivity{
             switch (id) {
                 case R.id.ans_1:
                     NG.putExtra("question","1");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
                     NG.putExtra("question","1");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
@@ -169,6 +180,7 @@ public class qr1 extends AppCompatActivity{
                     break;
                 case R.id.ans_4:
                     NG.putExtra("question","1");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
             }
@@ -184,19 +196,22 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
-                    NG.putExtra("question","2");
-                    startActivity(NG);
-                    break;
-                case R.id.ans_2:
-                    NG.putExtra("question","2");
-                    startActivity(NG);
-                    break;
-                case R.id.ans_3:
                     OK.putExtra("question","2");
                     startActivity(OK);
                     break;
+                case R.id.ans_2:
+                    NG.putExtra("question","2");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
+                    break;
+                case R.id.ans_3:
+                    NG.putExtra("question","2");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
+                    break;
                 case R.id.ans_4:
                     NG.putExtra("question","2");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
             }
@@ -213,19 +228,22 @@ public class qr1 extends AppCompatActivity{
             switch (id) {
                 case R.id.ans_1:
                     NG.putExtra("question","3");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
                     NG.putExtra("question","3");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
-                    OK.putExtra("question","3");
-                    startActivity(OK);
+                    NG.putExtra("question","3");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
                     break;
                 case R.id.ans_4:
-                    NG.putExtra("question","3");
-                    startActivity(NG);
+                    OK.putExtra("question","3");
+                    startActivity(OK);
                     break;
             }
         }
@@ -241,18 +259,21 @@ public class qr1 extends AppCompatActivity{
             switch (id) {
                 case R.id.ans_1:
                     NG.putExtra("question","4");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
-                    NG.putExtra("question","4");
-                    startActivity(NG);
-                    break;
-                case R.id.ans_3:
                     OK.putExtra("question","4");
                     startActivity(OK);
                     break;
+                case R.id.ans_3:
+                    NG.putExtra("question","4");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
+                    break;
                 case R.id.ans_4:
                     NG.putExtra("question","4");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
             }
@@ -268,19 +289,22 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
-                    NG.putExtra("question","5");
-                    startActivity(NG);
-                    break;
-                case R.id.ans_2:
-                    NG.putExtra("question","5");
-                    startActivity(NG);
-                    break;
-                case R.id.ans_3:
                     OK.putExtra("question","5");
                     startActivity(OK);
                     break;
+                case R.id.ans_2:
+                    NG.putExtra("question","5");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
+                    break;
+                case R.id.ans_3:
+                    NG.putExtra("question","5");
+                    NG.putExtra("nokori",mTransitionCount);
+                    startActivity(NG);
+                    break;
                 case R.id.ans_4:
                     NG.putExtra("question","5");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
             }
@@ -297,10 +321,12 @@ public class qr1 extends AppCompatActivity{
             switch (id) {
                 case R.id.ans_1:
                     NG.putExtra("question","ex");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
                     NG.putExtra("question","ex");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
@@ -309,6 +335,7 @@ public class qr1 extends AppCompatActivity{
                     break;
                 case R.id.ans_4:
                     NG.putExtra("question","ex");
+                    NG.putExtra("nokori",mTransitionCount);
                     startActivity(NG);
                     break;
             }
