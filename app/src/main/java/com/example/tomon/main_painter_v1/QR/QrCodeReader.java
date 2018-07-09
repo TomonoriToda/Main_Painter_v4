@@ -43,11 +43,11 @@ public class QrCodeReader extends AppCompatActivity {
                 if(barcodeResult.getText().equals("qr1")){
                     Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","1");//何の問題か
-                    quiz.putExtra("Q","ARSコンピュータ専門学校の、'A'は略さないでなんという？");//問題
-                    quiz.putExtra("1","");//回答１
-                    quiz.putExtra("2","職業実践專門課程");//回答２
-                    quiz.putExtra("3","職業実践専門課程");//回答３
-                    quiz.putExtra("4","");//回答４
+                    quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
+                    quiz.putExtra("1","7");//回答１
+                    quiz.putExtra("2","8");//回答２
+                    quiz.putExtra("3","9");//回答３
+                    quiz.putExtra("4","10");//回答４
                     startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr2")) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);

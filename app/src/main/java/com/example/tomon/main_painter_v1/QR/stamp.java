@@ -91,6 +91,7 @@ public class stamp extends AppCompatActivity {
         if ((Q1 & Q2 & Q3 & Q4 & Q5)){
             Intent quiz = new Intent(stamp.this,qr1.class);
             quiz.putExtra("Question","ex");//何の問題か
+            quiz.putExtra("title","５問全てに正解したので、EX問題に挑戦!!");
             quiz.putExtra("Q","EX問題!!");//問題
             quiz.putExtra("1","");//回答１
             quiz.putExtra("2","");//回答２

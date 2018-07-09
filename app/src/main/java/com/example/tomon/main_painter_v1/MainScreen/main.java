@@ -93,11 +93,11 @@ public class main extends AppCompatActivity {
             public void onClick(View view) {
                 Intent quiz = new Intent(main.this,qr1.class);
                 quiz.putExtra("Question","1");//何の問題か
-                quiz.putExtra("Q","わしには多くの孫がいるが、さて何歳でしょうか？");//問題
-                quiz.putExtra("1","100歳");//回答１
-                quiz.putExtra("2","60歳");//回答２
-                quiz.putExtra("3","0歳");//回答３
-                quiz.putExtra("4","111歳");//回答４
+                quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
+                quiz.putExtra("1","7");//回答１
+                quiz.putExtra("2","8");//回答２
+                quiz.putExtra("3","9");//回答３
+                quiz.putExtra("4","10");//回答４
                 startActivity(quiz);
             }
         });

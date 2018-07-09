@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tomon.main_painter_v1.MainScreen.main;
 import com.example.tomon.main_painter_v1.R;
 
 public class qr1 extends AppCompatActivity{
@@ -22,8 +23,19 @@ public class qr1 extends AppCompatActivity{
         Button ans3 = findViewById(R.id.ans_3);
         Button ans4 = findViewById(R.id.ans_4);
 
+        Button home = findViewById(R.id.button_ホームへ);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(qr1.this,main.class);
+                startActivity(intent);
+            }
+        });
 
 
+
+        //５問の問題と回答をIntent
         Intent intent = getIntent();
         String Qestion_number = intent.getStringExtra("Question");
         String title = intent.getStringExtra("Q");
@@ -31,6 +43,16 @@ public class qr1 extends AppCompatActivity{
         String A2 = intent.getStringExtra("2");
         String A3 = intent.getStringExtra("3");
         String A4 = intent.getStringExtra("4");
+
+        //EX問題の問題と回答をIntent
+        Intent intent1 = getIntent();
+        String Qestion_numberex = intent.getStringExtra("Question");
+        String titleex = intent.getStringExtra("Q");
+        String title2Ex = intent.getStringExtra("title");
+        String A1ex = intent.getStringExtra("1");
+        String A2ex = intent.getStringExtra("2");
+        String A3ex = intent.getStringExtra("3");
+        String A4ex = intent.getStringExtra("4");
 
 
         //Intentで持ってきた値を比較して、その問題と回答をセットする
@@ -81,7 +103,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "ex": {
-                setText(title, A1, A2, A3, A4);
+                setTextEx(titleex,title2Ex,A1ex,A2ex,A3ex,A4ex);
                 btClickex b = new btClickex();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -106,6 +128,22 @@ public class qr1 extends AppCompatActivity{
         Q3.setText(q3);
         Q4.setText(q4);
 
+    }
+
+    public void setTextEx(String question,String title, String q1,String q2,String q3,String q4){
+        TextView mondai = findViewById(R.id.textView_問題);
+        TextView Title = findViewById(R.id.textView_title);
+        TextView Q1 = findViewById(R.id.textView_回答1);
+        TextView Q2 = findViewById(R.id.textView_回答2);
+        TextView Q3 = findViewById(R.id.textView_回答3);
+        TextView Q4 = findViewById(R.id.textView_回答4);
+
+        mondai.setText(question);
+        Title.setText(title);
+        Q1.setText(q1);
+        Q2.setText(q2);
+        Q3.setText(q3);
+        Q4.setText(q4);
     }
 
 
@@ -258,19 +296,19 @@ public class qr1 extends AppCompatActivity{
             Intent NG = new Intent(qr1.this,qr1_ans_ng.class);
             switch (id) {
                 case R.id.ans_1:
-                    NG.putExtra("question","5");
+                    NG.putExtra("question","ex");
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
-                    NG.putExtra("question","5");
+                    NG.putExtra("question","ex");
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
-                    OK.putExtra("question","5");
+                    OK.putExtra("question","ex");
                     startActivity(OK);
                     break;
                 case R.id.ans_4:
-                    NG.putExtra("question","5");
+                    NG.putExtra("question","ex");
                     startActivity(NG);
                     break;
             }

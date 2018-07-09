@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.tomon.main_painter_v1.MainScreen.main;
 import com.example.tomon.main_painter_v1.R;
 
 
@@ -25,6 +26,15 @@ public class qr1_ans_ng extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 back(Q);
+            }
+        });
+
+        Button home = findViewById(R.id.button_ホームへ戻る);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(qr1_ans_ng.this,main.class);
+                startActivity(intent);
             }
         });
 
