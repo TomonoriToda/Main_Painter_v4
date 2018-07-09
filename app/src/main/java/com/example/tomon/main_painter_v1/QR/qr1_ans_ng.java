@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
 import com.example.tomon.main_painter_v1.R;
 
 
@@ -35,7 +35,7 @@ public class qr1_ans_ng extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(qr1_ans_ng.this,main.class);
+                Intent intent = new Intent(qr1_ans_ng.this,main_top.class);
                 startActivity(intent);
             }
         });
@@ -74,6 +74,10 @@ public class qr1_ans_ng extends AppCompatActivity {
             quiz.putExtra("3","");//回答３
             quiz.putExtra("4","");//回答４
             startActivity(quiz);
+        }else{
+            Intent intent = new Intent(qr1_ans_ng.this,main_top.class);
+            Toast.makeText(getBaseContext(),"回答制限に達しました(´Д⊂ヽ",Toast.LENGTH_SHORT).show();
+            startActivity(intent);
         }
     }
 

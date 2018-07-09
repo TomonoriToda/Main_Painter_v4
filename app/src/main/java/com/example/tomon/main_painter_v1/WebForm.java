@@ -9,6 +9,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
+
 public class WebForm extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class WebForm extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     // インテントのインスタンス生成
-                    Intent intent = new Intent(WebForm.this, com.example.tomon.main_painter_v1.MainScreen.main.class);
+                    Intent intent = new Intent(WebForm.this, main_top.class);
                     // 次画面のアクティビティ起動
                     startActivity(intent);
                 }

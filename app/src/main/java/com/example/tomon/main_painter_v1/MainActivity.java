@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         bt_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, main.class);
+                Intent intent = new Intent(MainActivity.this, main_top.class);
                 // 次画面のアクティビティ起動
                 startActivity(intent);
             }

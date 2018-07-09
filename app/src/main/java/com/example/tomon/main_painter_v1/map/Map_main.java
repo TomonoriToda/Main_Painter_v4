@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
 import com.example.tomon.main_painter_v1.R;
 
 public class Map_main extends AppCompatActivity implements View.OnClickListener{
@@ -42,7 +42,7 @@ public class Map_main extends AppCompatActivity implements View.OnClickListener{
         main_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Map_main.this,main.class);
+                Intent intent = new Intent(Map_main.this,main_top.class);
                 startActivity(intent);
             }
         });

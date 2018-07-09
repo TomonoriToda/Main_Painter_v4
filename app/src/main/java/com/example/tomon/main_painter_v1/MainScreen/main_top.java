@@ -14,7 +14,7 @@ import com.example.tomon.main_painter_v1.R;
 import com.example.tomon.main_painter_v1.WebForm;
 import com.example.tomon.main_painter_v1.map.Map_main;
 
-public class main extends AppCompatActivity {
+public class main_top extends AppCompatActivity {
 
     int x=0;
 
@@ -36,7 +36,7 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // インテントのインスタンス生成
-                Intent intent = new Intent(main.this, QrCodeReader.class);
+                Intent intent = new Intent(main_top.this, QrCodeReader.class);
                 // 次画面のアクティビティ起動
                 startActivity(intent);
             }
@@ -46,7 +46,7 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // インテントのインスタンス生成
-                Intent intent = new Intent(main.this, Map_main.class);
+                Intent intent = new Intent(main_top.this, Map_main.class);
                 // 次画面のアクティビティ起動
                 startActivity(intent);
             }
@@ -56,7 +56,7 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // インテントのインスタンス生成
-                Intent intent = new Intent(main.this, Paint_Top.class);
+                Intent intent = new Intent(main_top.this, Paint_Top.class);
                 // 次画面のアクティビティ起動
                 startActivity(intent);
             }
@@ -73,7 +73,7 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // インテントのインスタンス生成
-                Intent intent = new Intent(main.this,WebForm.class);
+                Intent intent = new Intent(main_top.this,WebForm.class);
                 // 次画面のアクティビティ起動
                 startActivity(intent);
             }
@@ -92,7 +92,7 @@ public class main extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main.this,qr1.class);
+                Intent quiz = new Intent(main_top.this,qr1.class);
                 quiz.putExtra("Question","1");//何の問題か
                 quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
                 quiz.putExtra("nokori",3);
@@ -107,21 +107,21 @@ public class main extends AppCompatActivity {
         test2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main.this,qr1.class);
+                Intent quiz = new Intent(main_top.this,qr1.class);
                 quiz.putExtra("Question","2");//何の問題か
-                quiz.putExtra("Q","２問目の問題");//問題
                 quiz.putExtra("nokori",3);
-                quiz.putExtra("1","あ");//回答１
-                quiz.putExtra("2","い");//回答２
-                quiz.putExtra("3","う");//回答３
-                quiz.putExtra("4","え");//回答４
+                quiz.putExtra("Q","勉強熱心なケンイチ君は、毎日勉強しています。でも、どうしてもたくさん勉強できない月があります。さて、何月でしょうか？");//問題
+                quiz.putExtra("1","２月");//回答１
+                quiz.putExtra("2","１０月");//回答２
+                quiz.putExtra("3","７月");//回答３
+                quiz.putExtra("4","３月");//回答４
                 startActivity(quiz);
             }
         });
         test3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main.this,qr1.class);
+                Intent quiz = new Intent(main_top.this,qr1.class);
                 quiz.putExtra("Question","3");//何の問題か
                 quiz.putExtra("Q","３問目の問題");//問題
                 quiz.putExtra("1","あ");//回答１
@@ -134,7 +134,7 @@ public class main extends AppCompatActivity {
         test4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main.this,qr1.class);
+                Intent quiz = new Intent(main_top.this,qr1.class);
                 quiz.putExtra("Question","4");//何の問題か
                 quiz.putExtra("Q","４問目の問題");//問題
                 quiz.putExtra("1","あ");//回答１
@@ -147,7 +147,7 @@ public class main extends AppCompatActivity {
         test5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main.this,qr1.class);
+                Intent quiz = new Intent(main_top.this,qr1.class);
                 quiz.putExtra("Question","5");//何の問題か
                 quiz.putExtra("Q","５問目の問題");//問題
                 quiz.putExtra("1","あ");//回答１

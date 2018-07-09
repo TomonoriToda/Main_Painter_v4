@@ -7,9 +7,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
 import com.example.tomon.main_painter_v1.R;
 
 public class qr1 extends AppCompatActivity{
@@ -30,7 +29,7 @@ public class qr1 extends AppCompatActivity{
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(qr1.this,main.class);
+                Intent intent = new Intent(qr1.this,main_top.class);
                 startActivity(intent);
             }
         });

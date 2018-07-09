@@ -7,9 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.example.tomon.main_painter_v1.MainScreen.main;
+import com.example.tomon.main_painter_v1.MainScreen.main_top;
 import com.example.tomon.main_painter_v1.R;
 import com.google.zxing.ResultPoint;
 import com.journeyapps.barcodescanner.BarcodeCallback;
@@ -30,7 +29,7 @@ public class QrCodeReader extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QrCodeReader.this,main.class);
+                Intent intent = new Intent(QrCodeReader.this,main_top.class);
                 startActivity(intent);
             }
         });
@@ -54,11 +53,11 @@ public class QrCodeReader extends AppCompatActivity {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","2");//何の問題か
                     quiz.putExtra("nokori",3);
-                    quiz.putExtra("Q","");//問題
-                    quiz.putExtra("1","");//回答１
-                    quiz.putExtra("2","");//回答２
-                    quiz.putExtra("3","");//回答３
-                    quiz.putExtra("4","");//回答４
+                    quiz.putExtra("Q","勉強熱心なケンイチ君は、毎日勉強しています。でも、どうしてもたくさん勉強できない月があります。さて、何月でしょうか？");//問題
+                    quiz.putExtra("1","２月");//回答１
+                    quiz.putExtra("2","１０月");//回答２
+                    quiz.putExtra("3","７月");//回答３
+                    quiz.putExtra("4","３月");//回答４
                    startActivity(quiz);
                 }else if(barcodeResult.getText().equals("qr3")) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
