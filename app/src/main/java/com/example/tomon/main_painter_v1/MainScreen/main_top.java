@@ -86,6 +86,7 @@ public class main_top extends AppCompatActivity {
         ///////////////////////////////////////////////////////////////////////////////////////////
         //テスト
         ///////////////////////////////////////////////////////////////////////////////////////////
+        /*
         Button test =  findViewById(R.id.test);
         Button test2 = findViewById(R.id.test2);
         Button test3 = findViewById(R.id.test3);
@@ -159,7 +160,9 @@ public class main_top extends AppCompatActivity {
                 startActivity(quiz);
             }
         });
+        */
     }
+
 
 
 

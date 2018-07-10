@@ -105,7 +105,23 @@ public class qr1_ans_ng extends AppCompatActivity {
             startActivity(quiz);
         }else {
             Intent intent = new Intent(qr1_ans_ng.this, main_top.class);
-            String s = intent.getStringExtra("question");
+            String s = intent.getStringExtra("Question");
+            if (s.equals("1")){
+                QrCodeReader.N1=1;
+                startActivity(intent);
+            }else if (s.equals("2")){
+                QrCodeReader.N2=1;
+                startActivity(intent);
+            }else if (s.equals("3")){
+                QrCodeReader.N3=1;
+                startActivity(intent);
+            }else if (s.equals("4")){
+                QrCodeReader.N4=1;
+                startActivity(intent);
+            }else if (s.equals("5")){
+                QrCodeReader.N5=1;
+                startActivity(intent);
+            }
             Toast.makeText(getBaseContext(), "回答制限に達しました(´Д⊂ヽ", Toast.LENGTH_SHORT).show();
 
         }
