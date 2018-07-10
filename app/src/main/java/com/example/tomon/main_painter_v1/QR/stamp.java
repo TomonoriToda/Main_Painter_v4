@@ -91,11 +91,11 @@ public class stamp extends AppCompatActivity {
             Intent quiz = new Intent(stamp.this,qr1.class);
             quiz.putExtra("Question","ex");//何の問題か
             quiz.putExtra("title","５問全てに正解したので、EX問題に挑戦!!");
-            quiz.putExtra("Q","EX問題!!");//問題
-            quiz.putExtra("1","");//回答１
-            quiz.putExtra("2","");//回答２
-            quiz.putExtra("3","");//回答３
-            quiz.putExtra("4","");//回答４
+            quiz.putExtra("Q","インターネットを使ってVPNを構築する際に利用されるネットワーク層(IP層)のセキュリティプロトコルはどれか。");//問題
+            quiz.putExtra("1","S/MIME");//回答１
+            quiz.putExtra("2","WEP");//回答２
+            quiz.putExtra("3","IPsec");//回答３
+            quiz.putExtra("4","WPA");//回答４
             startActivity(quiz);
         }
 

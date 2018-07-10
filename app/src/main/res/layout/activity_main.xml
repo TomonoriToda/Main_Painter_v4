@@ -41,7 +41,6 @@
         android:layout_height="66dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/canvasView"
-        android:layout_marginTop="-6dp"
         android:text="問題の絵を消す"
         android:textSize="24sp" />
 
@@ -56,10 +55,11 @@
 
     <Button
         android:id="@+id/Button_Save"
-        android:layout_width="298dp"
+        android:layout_width="278dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:background="@drawable/ok_image_button"
         android:text="このボタンを押すと、描いた絵が公開されます"
         android:textSize="12sp" />
 
@@ -67,7 +67,6 @@
         android:id="@+id/mondai"
         android:layout_width="71dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="問題"
@@ -77,20 +76,19 @@
         android:id="@+id/kotae"
         android:layout_width="71dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/clear_button"
+        android:layout_alignTop="@+id/canvasView2"
         android:text="答え"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/button_home"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="0dp"
-        android:text="ホームへ戻る"
+        android:background="@drawable/image_home"
         android:textSize="18sp" />
 
     <Button
@@ -99,6 +97,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/button_home"
+        android:background="@drawable/ok_image_button"
         android:text="絵を見に行く"
         android:textSize="24sp" />
 

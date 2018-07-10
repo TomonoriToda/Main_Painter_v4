@@ -13,6 +13,7 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.File;
@@ -24,12 +25,13 @@ import java.util.Date;
 
 public class CanvasView extends View {
 
-
     private final ArrayList<Path> pathList;  // 直線リスト
-    private final Paint paint;
+    public final Paint paint;
     private Activity _context;
     private Bitmap bitmap = null;
     private Canvas bmpCanvas;
+
+
 
     //======================================================================================
     //--  コンストラクタ
@@ -65,6 +67,8 @@ public class CanvasView extends View {
         paint.setStrokeWidth(10);           // 線の太さ
         _context = (Activity) context;
     }
+
+
 
     //======================================================================================
     //--  描画メソッド
@@ -164,5 +168,13 @@ public class CanvasView extends View {
         }
 
     }
+
+
+    private static CanvasView instance = null;
+    public static CanvasView getInstance() {
+        return instance;
+    }
+
+
 
 }

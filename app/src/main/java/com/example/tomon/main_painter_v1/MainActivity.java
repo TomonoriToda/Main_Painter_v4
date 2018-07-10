@@ -1,7 +1,11 @@
 package com.example.tomon.main_painter_v1;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +16,7 @@ import android.widget.Toast;
 
 
 import com.example.tomon.main_painter_v1.MainScreen.main_top;
+import com.example.tomon.main_painter_v1.map.Main1Activity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -22,6 +27,7 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     final byte[] bByte = null;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Button bt2 = (Button) findViewById(R.id.clear_button2);
         Button bt_home = (Button)findViewById(R.id.button_home);
         Button web = findViewById(R.id.button_絵を見に行く);
+
 
         //- 動作設定
         bt.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
 
