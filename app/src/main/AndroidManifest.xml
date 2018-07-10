@@ -49,6 +49,7 @@
         <activity android:name=".map.Main501Activity"/>
         <activity android:name=".map.Main502Activity"/>
         <activity android:name=".map.Map_main"/>
+        <activity android:name=".ars_web"/>
     </application>
 
 </manifest>

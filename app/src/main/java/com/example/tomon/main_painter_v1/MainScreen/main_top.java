@@ -12,6 +12,7 @@ import com.example.tomon.main_painter_v1.QR.QrCodeReader;
 import com.example.tomon.main_painter_v1.QR.qr1;
 import com.example.tomon.main_painter_v1.R;
 import com.example.tomon.main_painter_v1.WebForm;
+import com.example.tomon.main_painter_v1.ars_web;
 import com.example.tomon.main_painter_v1.map.Map_main;
 
 public class main_top extends AppCompatActivity {
@@ -65,7 +66,8 @@ public class main_top extends AppCompatActivity {
         ars_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(main_top.this,ars_web.class);
+                startActivity(intent);
             }
         });
 
