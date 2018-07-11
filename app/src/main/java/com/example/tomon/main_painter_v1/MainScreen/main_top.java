@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.tomon.main_painter_v1.Paint_Top;
 import com.example.tomon.main_painter_v1.QR.QrCodeReader;
 import com.example.tomon.main_painter_v1.QR.qr1;
+import com.example.tomon.main_painter_v1.QR.stamp;
 import com.example.tomon.main_painter_v1.R;
 import com.example.tomon.main_painter_v1.WebForm;
 import com.example.tomon.main_painter_v1.ars_web;
@@ -29,10 +30,12 @@ public class main_top extends AppCompatActivity {
         Button paint_btn = (Button)findViewById(R.id.button_paint);   //お絵描きのボタン
         Button ars_btn = (Button)findViewById(R.id.button_arsinfo);     //アルス情報のボタン
         Button net_btn = (Button)findViewById(R.id.button_web);     //専用webフォーム
+        Button net2_btn = findViewById(R.id.button_web2);           //専用webフォーム
+        Button kaitou = findViewById(R.id.button_回答状況);//回答状況確認　スタンプ画面へ移動
 
 
 
-
+        //トップ画面から、QR読み取り画面へ移動
         QR_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +46,7 @@ public class main_top extends AppCompatActivity {
             }
         });
 
+        //トップ画面から、マップ画面へ移動
         map_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +57,7 @@ public class main_top extends AppCompatActivity {
             }
         });
 
+        //トップ画面から、お絵描きアプリへ移動
         paint_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +68,7 @@ public class main_top extends AppCompatActivity {
             }
         });
 
+        //トップ画面から、お絵描きwebへ移動
         ars_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +77,7 @@ public class main_top extends AppCompatActivity {
             }
         });
 
+        //トップ画面から、お絵描きwebへ移動
         net_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,86 +88,29 @@ public class main_top extends AppCompatActivity {
             }
         });
 
-
-
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        //テスト
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        /*
-        Button test =  findViewById(R.id.test);
-        Button test2 = findViewById(R.id.test2);
-        Button test3 = findViewById(R.id.test3);
-        Button test4 = findViewById(R.id.test4);
-        Button test5 = findViewById(R.id.test5);
-        test.setOnClickListener(new View.OnClickListener() {
+        //トップ画面から、アルス情報へ移動
+        net2_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main_top.this,qr1.class);
-                quiz.putExtra("Question","1");//何の問題か
-                quiz.putExtra("Q","アルスコンピュータ専門学校の学科・コースはいくつあるか？");//問題
-                quiz.putExtra("nokori",3);
-                quiz.putExtra("1","7");//回答１
-                quiz.putExtra("2","8");//回答２
-                quiz.putExtra("3","9");//回答３
-                quiz.putExtra("4","10");//回答４
-                startActivity(quiz);
+                // インテントのインスタンス生成
+                Intent intent = new Intent(main_top.this,WebForm.class);
+                // 次画面のアクティビティ起動
+                startActivity(intent);
             }
         });
 
-        test2.setOnClickListener(new View.OnClickListener() {
+        //トップ画面から、回答状況確認画面へ移動
+        kaitou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent quiz = new Intent(main_top.this,qr1.class);
-                quiz.putExtra("Question","2");//何の問題か
-                quiz.putExtra("nokori",3);
-                quiz.putExtra("Q","勉強熱心なケンイチ君は、毎日勉強しています。でも、どうしてもたくさん勉強できない月があります。さて、何月でしょうか？");//問題
-                quiz.putExtra("1","２月");//回答１
-                quiz.putExtra("2","１０月");//回答２
-                quiz.putExtra("3","７月");//回答３
-                quiz.putExtra("4","３月");//回答４
-                startActivity(quiz);
+                // インテントのインスタンス生成
+                Intent intent = new Intent(main_top.this,stamp.class);
+                intent.putExtra("question","");
+                // 次画面のアクティビティ起動
+                startActivity(intent);
             }
         });
-        test3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent quiz = new Intent(main_top.this,qr1.class);
-                quiz.putExtra("Question","3");//何の問題か
-                quiz.putExtra("Q","３問目の問題");//問題
-                quiz.putExtra("1","あ");//回答１
-                quiz.putExtra("2","い");//回答２
-                quiz.putExtra("3","う");//回答３
-                quiz.putExtra("4","え");//回答４
-                startActivity(quiz);
-            }
-        });
-        test4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent quiz = new Intent(main_top.this,qr1.class);
-                quiz.putExtra("Question","4");//何の問題か
-                quiz.putExtra("Q","４問目の問題");//問題
-                quiz.putExtra("1","あ");//回答１
-                quiz.putExtra("2","い");//回答２
-                quiz.putExtra("3","う");//回答３
-                quiz.putExtra("4","え");//回答４
-                startActivity(quiz);
-            }
-        });
-        test5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent quiz = new Intent(main_top.this,qr1.class);
-                quiz.putExtra("Question","5");//何の問題か
-                quiz.putExtra("Q","５問目の問題");//問題
-                quiz.putExtra("1","あ");//回答１
-                quiz.putExtra("2","い");//回答２
-                quiz.putExtra("3","う");//回答３
-                quiz.putExtra("4","え");//回答４
-                startActivity(quiz);
-            }
-        });
-        */
+
     }
 
 
@@ -173,12 +123,11 @@ public class main_top extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // Disable Back key
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            return false;
-        }
+        return keyCode != KeyEvent.KEYCODE_BACK && super.onKeyDown(keyCode, event);
 
-        return super.onKeyDown(keyCode, event);
     }
+
+
 
 
 

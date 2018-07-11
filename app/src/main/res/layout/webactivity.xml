@@ -9,10 +9,7 @@
     <WebView
         android:id="@+id/webView"
         android:layout_width="585dp"
-        android:layout_height="770dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="818dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,27 +21,25 @@
 
     <Button
         android:id="@+id/button_メインへ"
-        android:layout_width="99dp"
-        android:layout_height="58dp"
+        android:layout_width="124dp"
+        android:layout_height="71dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:text="メインへ"
+        android:background="@drawable/image_home"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_問題描く"
-        android:layout_width="wrap_content"
-        android:layout_height="57dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="147dp"
+        android:layout_height="72dp"
+        android:background="@drawable/ok_image_button"
         android:text="問題を描く！"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

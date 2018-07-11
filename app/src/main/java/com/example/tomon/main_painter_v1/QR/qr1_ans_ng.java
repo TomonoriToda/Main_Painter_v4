@@ -104,23 +104,28 @@ public class qr1_ans_ng extends AppCompatActivity {
             quiz.putExtra("4","新サイクルじゃがー");//回答４
             startActivity(quiz);
         }else {
-            Intent intent = new Intent(qr1_ans_ng.this, main_top.class);
-            String s = intent.getStringExtra("Question");
-            if (s.equals("1")){
-                QrCodeReader.N1=1;
-                startActivity(intent);
-            }else if (s.equals("2")){
-                QrCodeReader.N2=1;
-                startActivity(intent);
-            }else if (s.equals("3")){
-                QrCodeReader.N3=1;
-                startActivity(intent);
-            }else if (s.equals("4")){
-                QrCodeReader.N4=1;
-                startActivity(intent);
-            }else if (s.equals("5")){
-                QrCodeReader.N5=1;
-                startActivity(intent);
+            Intent intent = new Intent(qr1_ans_ng.this, qr1_ans_ng_seigen.class);
+            switch (q) {
+                case "1":
+                    QrCodeReader.N1=1;
+                    startActivity(intent);
+                    break;
+                case "2":
+                    QrCodeReader.N2 = 1;
+                    startActivity(intent);
+                    break;
+                case "3":
+                    QrCodeReader.N3 = 1;
+                    startActivity(intent);
+                    break;
+                case "4":
+                    QrCodeReader.N4 = 1;
+                    startActivity(intent);
+                    break;
+                case "5":
+                    QrCodeReader.N5 = 1;
+                    startActivity(intent);
+                    break;
             }
             Toast.makeText(getBaseContext(), "回答制限に達しました(´Д⊂ヽ", Toast.LENGTH_SHORT).show();
 

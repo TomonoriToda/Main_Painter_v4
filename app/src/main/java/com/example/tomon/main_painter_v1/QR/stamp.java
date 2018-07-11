@@ -62,6 +62,8 @@ public class stamp extends AppCompatActivity {
                 break;
             }
         }
+
+        //一番上で宣言している変数が、trueである場所だけ、画像を表示させる
         if(Q1){
             ImageView image = findViewById(R.id.Q1_stamp);
             image.setImageResource(R.drawable.itarusukun);

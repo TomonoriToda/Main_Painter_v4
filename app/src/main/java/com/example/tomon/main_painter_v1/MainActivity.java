@@ -8,10 +8,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 
@@ -44,6 +46,33 @@ public class MainActivity extends AppCompatActivity {
         Button bt2 = (Button) findViewById(R.id.clear_button2);
         Button bt_home = (Button)findViewById(R.id.button_home);
         Button web = findViewById(R.id.button_絵を見に行く);
+        Button RED = findViewById(R.id.button_赤);
+        Button BLACK = findViewById(R.id.button_黒);
+        Button BLUE = findViewById(R.id.button_青);
+
+        RED.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CanvasView.paint.setColor(Color.RED);
+            }
+        });
+
+        BLACK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CanvasView.paint.setColor(Color.BLACK);
+            }
+        });
+
+        BLUE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CanvasView.paint.setColor(Color.BLUE);
+            }
+        });
+
+
+
 
 
         //- 動作設定

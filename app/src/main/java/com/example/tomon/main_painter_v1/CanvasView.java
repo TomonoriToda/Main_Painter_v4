@@ -26,7 +26,7 @@ import java.util.Date;
 public class CanvasView extends View {
 
     private final ArrayList<Path> pathList;  // 直線リスト
-    public final Paint paint;
+    public static Paint paint;
     private Activity _context;
     private Bitmap bitmap = null;
     private Canvas bmpCanvas;
@@ -167,12 +167,6 @@ public class CanvasView extends View {
             Toast.makeText(getContext(), "dame", Toast.LENGTH_SHORT).show();
         }
 
-    }
-
-
-    private static CanvasView instance = null;
-    public static CanvasView getInstance() {
-        return instance;
     }
 
 

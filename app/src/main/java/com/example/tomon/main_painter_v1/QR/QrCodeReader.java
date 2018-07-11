@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.tomon.main_painter_v1.MainScreen.main_top;
 import com.example.tomon.main_painter_v1.R;
@@ -100,7 +101,8 @@ public class QrCodeReader extends AppCompatActivity {
                     quiz.putExtra("4","新サイクルじゃがー");//回答４
                    startActivity(quiz);
                 }else{
-                    finish();
+                    Toast.makeText(getBaseContext(),"この問題はこれ以上答えられません、次の問題へ行ってください！",Toast.LENGTH_LONG).show();
+
                 }
             }
 
