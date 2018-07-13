@@ -17,12 +17,14 @@ public class WebForm extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.webactivity);
 
-            WebView myWebView = (WebView) findViewById(R.id.webView);
+            WebView myWebView = findViewById(R.id.webView);
             myWebView.setWebViewClient(new WebViewClient());
-            myWebView.loadUrl("http://172.16.31.18:8080/paint.php");
+            myWebView.loadUrl("http://172.16.31.18:8080/Paint.php");
+
 
             Button main = (Button)findViewById(R.id.button_メインへ);
             Button web = findViewById(R.id.button_絵を見に行く);
+            Button kousin = findViewById(R.id.button_更新);
 
             main.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -42,6 +44,15 @@ public class WebForm extends AppCompatActivity {
                     Intent intent = new Intent(WebForm.this,MainActivity.class);
                     // 次画面のアクティビティ起動
                     startActivity(intent);
+                }
+            });
+
+            kousin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    WebView myWebView =findViewById(R.id.webView);
+                    myWebView.setWebViewClient(new WebViewClient());
+                    myWebView.loadUrl("http://172.16.31.18:8080/Paint.php");
                 }
             });
         }
