@@ -9,6 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView54"
+            android:layout_width="1031dp"
+            android:layout_height="554dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/map_haikei2" />
+
         <Button
             android:id="@+id/kyousitu301"
             android:layout_width="90dp"
@@ -28,12 +38,10 @@
 
         <Button
             android:id="@+id/kyousitu_305"
-            android:layout_width="130dp"
+            android:layout_width="140dp"
             android:layout_height="69dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/color01"
@@ -42,10 +50,10 @@
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.667"
+            app:layout_constraintHorizontal_bias="0.676"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.842" />
+            app:layout_constraintVertical_bias="0.801" />
 
         <Button
             android:id="@+id/kyousitu302"
@@ -65,25 +73,27 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2F"
+            android:layout_width="182dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/silverbutton"
+            android:text="2F"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="166dp"
+            android:layout_height="42dp"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="11dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:background="@drawable/greenbutton"
             android:text="4F"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -175,12 +185,11 @@
 
         <Button
             android:id="@+id/buttonm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="159dp"
+            android:layout_height="55dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
+            android:background="@drawable/lightbluebutton"
             android:text="@string/main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
