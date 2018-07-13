@@ -31,26 +31,32 @@
 
     <Button
         android:id="@+id/button_問題描く"
-        android:layout_width="183dp"
-        android:layout_height="84dp"
+        android:layout_width="197dp"
+        android:layout_height="81dp"
         android:background="@drawable/ok_image_button"
         android:fontFamily="@font/alfa_slab_one"
         android:text="問題を描く！"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button_更新"
         android:layout_width="144dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/image_seigen5"
         android:text="更新"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintEnd_toStartOf="@+id/button_問題描く"
         app:layout_constraintTop_toTopOf="parent" />
 

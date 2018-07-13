@@ -164,11 +164,12 @@
     <Button
         android:id="@+id/button_web"
         android:layout_width="36dp"
-        android:layout_height="339dp"
+        android:layout_height="354dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/ng_image_button"
-        android:text="→お絵描き公開一覧→"
-        android:textSize="24sp"
+        android:lineSpacingExtra="-5sp"
+        android:text="→お絵描きギャラリ→"
+        android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/button_web2"
         app:layout_constraintTop_toTopOf="parent" />
 
