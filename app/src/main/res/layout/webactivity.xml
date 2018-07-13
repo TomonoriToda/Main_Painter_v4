@@ -8,8 +8,8 @@
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="585dp"
-        android:layout_height="818dp"
+        android:layout_width="642dp"
+        android:layout_height="805dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/button_メインへ"
         android:layout_width="124dp"
-        android:layout_height="71dp"
+        android:layout_height="81dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/image_home"
         app:layout_constraintBottom_toTopOf="@+id/webView"
@@ -32,11 +32,14 @@
 
     <Button
         android:id="@+id/button_問題描く"
-        android:layout_width="147dp"
-        android:layout_height="72dp"
+        android:layout_width="183dp"
+        android:layout_height="84dp"
         android:background="@drawable/ok_image_button"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="問題を描く！"
+        android:textAlignment="center"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

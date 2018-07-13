@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         bt_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getBaseContext(),"送信しました！",Toast.LENGTH_LONG).show();
                 run1(findViewById(R.id.canvasView));
                 run2(findViewById(R.id.canvasView2));
             }

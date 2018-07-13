@@ -88,16 +88,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <Button
+        android:id="@+id/button_home_seigen2"
+        android:layout_width="160dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/image_home"
+        app:layout_constraintStart_toEndOf="@+id/imageView47"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/button_back_QR"
-        android:layout_width="141dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ok_image_haikei"
+        android:layout_width="182dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/image_seigen"
+        android:fontFamily="@font/autour_one"
         android:text="QR画面へ!!"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button_home_seigen"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />

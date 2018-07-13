@@ -51,6 +51,10 @@
         <activity android:name=".map.Map_main"/>
         <activity android:name=".ars_web"/>
         <activity android:name=".QR.qr1_ans_ng_seigen" android:screenOrientation="landscape"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

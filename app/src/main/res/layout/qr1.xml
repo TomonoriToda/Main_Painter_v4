@@ -6,6 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="wrap_content"
+        android:layout_height="962dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ok_image_haikei" />
+
     <TextView
         android:id="@+id/textView_問題"
         android:layout_width="930dp"
@@ -74,6 +84,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ans_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_問題" />
 
@@ -83,6 +94,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="204dp"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ans_2"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,6 +105,7 @@
         android:layout_marginBottom="116dp"
         android:layout_marginTop="95dp"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ans_3"
         app:layout_constraintTop_toBottomOf="@+id/textView_回答1" />
@@ -104,6 +117,7 @@
         android:layout_marginBottom="36dp"
         android:layout_marginTop="8dp"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ans_4"
         app:layout_constraintTop_toBottomOf="@+id/textView_回答2"
@@ -144,11 +158,11 @@
 
     <TextView
         android:id="@+id/textView_残り回数"
-        android:layout_width="85dp"
-        android:layout_height="47dp"
+        android:layout_width="74dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="16dp"
         android:textAlignment="center"
-        android:textSize="36sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11" />

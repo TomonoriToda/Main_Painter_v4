@@ -37,20 +37,20 @@
 
     <Button
         android:id="@+id/clear_button"
-        android:layout_width="297dp"
+        android:layout_width="300dp"
         android:layout_height="66dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/canvasView"
-        android:text="問題の絵を消す"
+        android:background="@drawable/paint_mondai_btn"
         android:textSize="24sp" />
 
     <Button
         android:id="@+id/clear_button2"
-        android:layout_width="301dp"
-        android:layout_height="64dp"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
         android:layout_alignBottom="@+id/clear_button"
         android:layout_toEndOf="@+id/clear_button"
-        android:text="答えを消す"
+        android:background="@drawable/paint_kotae_btn"
         android:textSize="24sp" />
 
     <Button
@@ -61,6 +61,7 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/ok_image_button"
         android:text="このボタンを押すと、描いた絵が公開されます"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="12sp" />
 
     <TextView
@@ -99,52 +100,56 @@
         android:layout_toEndOf="@+id/button_home"
         android:background="@drawable/ok_image_button"
         android:text="絵を見に行く"
-        android:textSize="24sp" />
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_黒"
-        android:layout_width="wrap_content"
+        android:layout_width="86dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/Button_Save"
         android:layout_alignParentStart="true"
         android:layout_marginStart="143dp"
-        android:text="黒" />
-
-    <Button
-        android:id="@+id/button_赤"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button_Save"
-        android:layout_toStartOf="@+id/Button_Save"
-        android:text="赤" />
-
-    <Button
-        android:id="@+id/button_青"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button_Save"
-        android:layout_alignStart="@+id/Button_Save"
-        android:text="青" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button_Save"
-        android:layout_marginBottom="16dp"
-        android:layout_toEndOf="@+id/button_青"
-        android:text="全体的に色が変わります"
-        android:textAlignment="viewStart"
-        android:textSize="15sp"
+        android:background="@drawable/paint_color_btn"
+        android:text="黒"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button_paint_back"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_赤"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/Button_Save"
+        android:layout_toEndOf="@+id/button_黒"
+        android:background="@drawable/paint_color_btn"
+        android:text="赤"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_青"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button_Save"
+        android:layout_toEndOf="@+id/button_赤"
+        android:background="@drawable/paint_color_btn"
+        android:text="青"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="202dp"
+        android:layout_height="54dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:text="一つ戻る" />
+        android:layout_below="@+id/canvasView2"
+        android:text="全体的に色が変わります"
+        android:textAlignment="viewStart"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <!-- 追加：ここまで  -->
 
