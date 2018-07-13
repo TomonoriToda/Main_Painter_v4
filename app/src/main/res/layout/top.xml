@@ -17,16 +17,39 @@
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.721"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854"
+        app:layout_constraintVertical_bias="0.851"
         app:srcCompat="@drawable/title_haikei" />
+
+    <ImageView
+        android:id="@+id/imageView_top1"
+        android:layout_width="170dp"
+        android:layout_height="145dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_image1" />
+
+    <TextView
+        android:id="@+id/ARS"
+        android:layout_width="26dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="-15sp"
+        android:text="ARS"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="248dp"
-        android:layout_height="255dp"
+        android:layout_height="252dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +103,9 @@
         android:id="@+id/textView2"
         android:layout_width="224dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginStart="8dp"
+        android:fontFamily="@font/black_ops_one"
         android:gravity="center"
         android:text="QR読み取り"
         android:textAlignment="center"
@@ -98,6 +122,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/black_ops_one"
         android:gravity="center"
         android:text="学内マップ"
         android:textColor="@android:color/holo_blue_dark"
@@ -112,6 +137,7 @@
         android:layout_height="46dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/black_ops_one"
         android:gravity="center"
         android:text="お絵描きApp"
         android:textColor="@android:color/holo_orange_light"
@@ -126,6 +152,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/black_ops_one"
         android:gravity="center"
         android:text="アルス情報"
         android:textColor="@android:color/holo_green_light"
@@ -156,12 +183,15 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="wrap_content"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
+        android:layout_marginStart="236dp"
+        android:lineSpacingExtra="-30sp"
         android:text="ようこそ"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="50sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -170,9 +200,10 @@
         android:id="@+id/textView22"
         android:layout_width="265dp"
         android:layout_height="64dp"
-        android:layout_marginStart="256dp"
+        android:layout_marginStart="240dp"
         android:layout_marginTop="80dp"
         android:text="アルスへ!!"
+        android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -192,7 +223,7 @@
         android:id="@+id/button_回答状況"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/ng_image_button"
         android:text="回答状況確認"
@@ -200,5 +231,26 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/button_web"
         app:layout_constraintTop_toBottomOf="@+id/imageView46" />
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="134dp"
+        android:layout_height="192dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/button_web"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:srcCompat="@drawable/game" />
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="162dp"
+        android:layout_height="208dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:saveEnabled="true"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:srcCompat="@drawable/iryou" />
 
 </android.support.constraint.ConstraintLayout>
