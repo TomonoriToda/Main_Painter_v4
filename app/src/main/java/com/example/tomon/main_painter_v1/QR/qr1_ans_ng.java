@@ -44,8 +44,12 @@ public class qr1_ans_ng extends AppCompatActivity {
 
     }
 
+    //１～５問の回答数
     int i = qr1.mTransitionCount;
     int x = i-1;
+    //EX問題の回答数
+    int iex = qr1.mTransitionCountex;
+    int xex = iex-1;
 
     //もう一度問題を解くときに、どの問題から来たかを判定
     //判定後、再度同じ問題に移動
@@ -93,15 +97,26 @@ public class qr1_ans_ng extends AppCompatActivity {
             quiz.putExtra("3", "８月と５月");//回答３
             quiz.putExtra("4", "９月と３月");//回答４
             startActivity(quiz);
-        }else if(q.equals("5")& x > 0){
+        }else if(q.equals("5")& x > 0) {
             Intent quiz = new Intent(qr1_ans_ng.this, qr1.class);
             quiz.putExtra("Question", "5");//何の問題か
             quiz.putExtra("nokori", x);
-            quiz.putExtra("Q","ポテトのナイト、手品師の自転車、ルーキーの頭。さてなんだろう？");//問題
-            quiz.putExtra("1","ポテンシャル");//回答１
-            quiz.putExtra("2","サイクリング");//回答２
-            quiz.putExtra("3","ホテルのナジア");//回答３
-            quiz.putExtra("4","新サイクルじゃがー");//回答４
+            quiz.putExtra("Q", "ポテトのナイト、手品師の自転車、ルーキーの頭。さてなんだろう？");//問題
+            quiz.putExtra("1", "ポテンシャル");//回答１
+            quiz.putExtra("2", "サイクリング");//回答２
+            quiz.putExtra("3", "ホテルのナジア");//回答３
+            quiz.putExtra("4", "新サイクルじゃがー");//回答４
+            startActivity(quiz);
+        }else if(q.equals("ex")& xex > 0){
+            Intent quiz = new Intent(qr1_ans_ng.this, qr1.class);
+            quiz.putExtra("Question","ex");//何の問題か
+            quiz.putExtra("title","５問全てに正解したので、EX問題に挑戦!!");
+            quiz.putExtra("nokori",xex);
+            quiz.putExtra("Q","一番長いホースの専門家であり設計者を逆さまに。これに当てはまるのは？");//問題
+            quiz.putExtra("1","幼児保育コース");//回答１
+            quiz.putExtra("2","システム開発コース");//回答２
+            quiz.putExtra("3","プロダクトデザイナー・CADコース");//回答３
+            quiz.putExtra("4","国際ITビジネスコース");//回答４
             startActivity(quiz);
         }else {
             Intent intent = new Intent(qr1_ans_ng.this, qr1_ans_ng_seigen.class);
@@ -124,6 +139,10 @@ public class qr1_ans_ng extends AppCompatActivity {
                     break;
                 case "5":
                     QrCodeReader.N5 = 1;
+                    startActivity(intent);
+                    break;
+                case"ex":
+                    QrCodeReader.Nex = 1;
                     startActivity(intent);
                     break;
             }
