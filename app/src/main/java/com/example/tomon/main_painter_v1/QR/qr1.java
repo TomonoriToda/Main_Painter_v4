@@ -14,6 +14,7 @@ import com.example.tomon.main_painter_v1.R;
 public class qr1 extends AppCompatActivity{
 
     static int mTransitionCount;
+    static int mTransitionCountex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class qr1 extends AppCompatActivity{
         Button ans3 = findViewById(R.id.ans_3);
         Button ans4 = findViewById(R.id.ans_4);
 
+        /*
         Button home = findViewById(R.id.button_ホームへ);
 
         home.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +35,7 @@ public class qr1 extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
+*/
 
 
 
@@ -49,19 +51,20 @@ public class qr1 extends AppCompatActivity{
 
         //EX問題の問題と回答をIntent
         Intent intent1 = getIntent();
-        String Qestion_numberex = intent.getStringExtra("Question");
-        String titleex = intent.getStringExtra("Q");
-        String title2Ex = intent.getStringExtra("title");
-        String A1ex = intent.getStringExtra("1");
-        String A2ex = intent.getStringExtra("2");
-        String A3ex = intent.getStringExtra("3");
-        String A4ex = intent.getStringExtra("4");
+        String Qestion_numberex = intent1.getStringExtra("Question");
+        String titleex = intent1.getStringExtra("Q");
+        mTransitionCountex= intent1.getIntExtra("nokori",0);
+        String sub_titleex = intent1.getStringExtra("title");
+        String A1ex = intent1.getStringExtra("1");
+        String A2ex = intent1.getStringExtra("2");
+        String A3ex = intent1.getStringExtra("3");
+        String A4ex = intent1.getStringExtra("4");
 
 
         //Intentで持ってきた値を比較して、その問題と回答をセットする
         switch (Qestion_number) {
             case "1": {
-                setText(title,mTransitionCount,A1, A2, A3, A4);
+                setText(title, mTransitionCount, A1, A2, A3, A4);
                 btClick1 b = new btClick1();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -70,7 +73,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "2": {
-                setText(title,mTransitionCount, A1, A2, A3, A4);
+                setText(title, mTransitionCount, A1, A2, A3, A4);
                 btClick2 b = new btClick2();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -79,7 +82,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "3": {
-                setText(title,mTransitionCount, A1, A2, A3, A4);
+                setText(title, mTransitionCount, A1, A2, A3, A4);
                 btClick3 b = new btClick3();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -88,7 +91,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "4": {
-                setText(title,mTransitionCount, A1, A2, A3, A4);
+                setText(title, mTransitionCount, A1, A2, A3, A4);
                 btClick4 b = new btClick4();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -97,7 +100,7 @@ public class qr1 extends AppCompatActivity{
                 break;
             }
             case "5": {
-                setText(title,mTransitionCount, A1, A2, A3, A4);
+                setText(title, mTransitionCount, A1, A2, A3, A4);
                 btClick5 b = new btClick5();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
@@ -105,18 +108,16 @@ public class qr1 extends AppCompatActivity{
                 ans4.setOnClickListener(b);
                 break;
             }
-            case "ex": {
-                setTextEx(titleex,mTransitionCount,title2Ex,A1ex,A2ex,A3ex,A4ex);
+        }
+            if (Qestion_numberex.equals("ex")){
+                setTextEx(titleex, mTransitionCount, sub_titleex, A1ex, A2ex, A3ex, A4ex);
                 btClickex b = new btClickex();
                 ans1.setOnClickListener(b);
                 ans2.setOnClickListener(b);
                 ans3.setOnClickListener(b);
                 ans4.setOnClickListener(b);
-                break;
             }
         }
-
-    }
 
     //Intentしてきた問題、回答文をTextViewにセット
     public void setText(String question,Integer i,String q1,String q2,String q3,String q4){
@@ -147,7 +148,7 @@ public class qr1 extends AppCompatActivity{
 
         mondai.setText(question);
         Title.setText(title);
-        nokori.setText(i);
+        nokori.setText(new String(String.valueOf(i)));
         Q1.setText(q1);
         Q2.setText(q2);
         Q3.setText(q3);
@@ -320,12 +321,12 @@ public class qr1 extends AppCompatActivity{
             switch (id) {
                 case R.id.ans_1:
                     NG.putExtra("question","ex");
-                    NG.putExtra("nokori",mTransitionCount);
+                    NG.putExtra("nokori",mTransitionCountex);
                     startActivity(NG);
                     break;
                 case R.id.ans_2:
                     NG.putExtra("question","ex");
-                    NG.putExtra("nokori",mTransitionCount);
+                    NG.putExtra("nokori",mTransitionCountex);
                     startActivity(NG);
                     break;
                 case R.id.ans_3:
@@ -334,7 +335,7 @@ public class qr1 extends AppCompatActivity{
                     break;
                 case R.id.ans_4:
                     NG.putExtra("question","ex");
-                    NG.putExtra("nokori",mTransitionCount);
+                    NG.putExtra("nokori",mTransitionCountex);
                     startActivity(NG);
                     break;
             }

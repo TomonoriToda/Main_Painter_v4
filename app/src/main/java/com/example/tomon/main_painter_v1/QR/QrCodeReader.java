@@ -25,6 +25,7 @@ public class QrCodeReader extends AppCompatActivity {
     public static int N3=0;
     public static int N4=0;
     public static int N5=0;
+    public static int Nex=0;
 
 
 
