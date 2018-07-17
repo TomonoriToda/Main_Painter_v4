@@ -54,7 +54,7 @@ public class QrCodeReader extends AppCompatActivity {
                 if(barcodeResult.getText().equals("qr1")& N1==0){
                     Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","1");//何の問題か
-                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("nokori",2);
                     quiz.putExtra("Q","アルスコンピュータ専門学校の学科コースはいくつあるか？");//問題
                     quiz.putExtra("1","7");//回答１
                     quiz.putExtra("2","8");//回答２
@@ -64,7 +64,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr2")&N2==0) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","2");//何の問題か
-                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("nokori",2);
                     quiz.putExtra("Q","勉強熱心なケンイチ君は、毎日勉強しています。でも、どうしてもたくさん勉強できない月があります。さて、何月でしょうか？");//問題
                     quiz.putExtra("1","２月");//回答１
                     quiz.putExtra("2","１０月");//回答２
@@ -74,7 +74,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr3")&N3==0) {
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","3");//何の問題か
-                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("nokori",2);
                     quiz.putExtra("Q","S=4,B=2,G=?,I=1,W=1 ？に入る数字は？");//問題
                     quiz.putExtra("1","6");//回答１
                     quiz.putExtra("2","3");//回答２
@@ -84,7 +84,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr4")&N4==0){
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","4");//何の問題か
-                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("nokori",2);
                     quiz.putExtra("Q","国家資格である、'基本情報技術者試験'は何月に行われるか");//問題
                     quiz.putExtra("1","２月と１１月");//回答１
                     quiz.putExtra("2","１０月と４月");//回答２
@@ -94,7 +94,7 @@ public class QrCodeReader extends AppCompatActivity {
                 }else if(barcodeResult.getText().equals("qr5")&N5==0){
                    Intent quiz = new Intent(QrCodeReader.this,qr1.class);
                     quiz.putExtra("Question","5");//何の問題か
-                    quiz.putExtra("nokori",3);
+                    quiz.putExtra("nokori",2);
                     quiz.putExtra("Q","ポテトのナイト、手品師の自転車、ルーキーの頭。さてなんだろう？");//問題
                     quiz.putExtra("1","ポテンシャル");//回答１
                     quiz.putExtra("2","サイクリング");//回答２

@@ -19,9 +19,10 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="386dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="QR読み取り画面"
+                android:textAlignment="center"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -33,7 +34,8 @@
                 android:background="@drawable/ok_image_button"
                 android:text="ホームへ"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_light"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -42,8 +44,24 @@
         <com.journeyapps.barcodescanner.CompoundBarcodeView
             android:id="@+id/barcodeView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+        </com.journeyapps.barcodescanner.CompoundBarcodeView>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="555dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:layout_weight="1"
+        android:text="読み取りにくいので、上下左右に動かしてみてください"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

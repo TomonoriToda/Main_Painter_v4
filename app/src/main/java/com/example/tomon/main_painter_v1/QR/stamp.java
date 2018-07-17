@@ -135,7 +135,7 @@ public class stamp extends AppCompatActivity {
             Intent quiz = new Intent(stamp.this,qr1.class);
             quiz.putExtra("Question","ex");//何の問題か
             quiz.putExtra("title","５問全てに正解したので、EX問題に挑戦!!");
-            quiz.putExtra("nokori",3);
+            quiz.putExtra("nokori",2);
             quiz.putExtra("Q","一番長いホースの専門家であり設計者を逆さまに。これに当てはまるのは？");//問題
             quiz.putExtra("1","幼児保育コース");//回答１
             quiz.putExtra("2","システム開発コース");//回答２
