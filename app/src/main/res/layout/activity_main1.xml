@@ -33,16 +33,14 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="227dp"
-        android:layout_height="56dp"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="12dp"
         android:background="@drawable/silverbutton"
         android:text="2Fへ"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/hoikutou"
@@ -64,17 +62,13 @@
 
     <Button
         android:id="@+id/buttonm"
-        android:layout_width="135dp"
-        android:layout_height="52dp"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="808dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/lightbluebutton"
         android:text="@string/main"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

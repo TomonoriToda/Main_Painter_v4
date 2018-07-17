@@ -73,34 +73,25 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="182dp"
-            android:layout_height="46dp"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/silverbutton"
             android:text="2F"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="166dp"
-            android:layout_height="42dp"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="11dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/greenbutton"
             android:text="4F"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toRightOf="@+id/button2"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintRight_toRightOf="parent" />
 
         <ImageView
             android:id="@+id/imageView2"

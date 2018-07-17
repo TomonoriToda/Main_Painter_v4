@@ -92,37 +92,25 @@
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="159dp"
-                android:layout_height="49dp"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
                 android:background="@drawable/redbutton"
                 android:text="1Fへ"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/button3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.982" />
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="171dp"
-                android:layout_height="46dp"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
                 android:background="@drawable/purplebutton"
                 android:text="3Fへ"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.99"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintRight_toRightOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView5"
