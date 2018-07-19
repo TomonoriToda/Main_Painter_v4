@@ -111,15 +111,6 @@ public class main_top extends AppCompatActivity {
             }
         });
 
-        //ARSボタン
-        Button arice = findViewById(R.id.ars_button);
-        arice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(main_top.this,Arice.class);
-                startActivity(intent);
-            }
-        });
 
 
     }
