@@ -18,6 +18,7 @@ public class WebForm extends AppCompatActivity {
             setContentView(R.layout.webactivity);
 
             WebView myWebView = findViewById(R.id.webView);
+            myWebView.clearCache(true);
             myWebView.setWebViewClient(new WebViewClient());
             myWebView.loadUrl("http://172.16.31.18:8080/Paint.php");
 
@@ -51,8 +52,11 @@ public class WebForm extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     WebView myWebView =findViewById(R.id.webView);
+                    myWebView.clearCache(true);
                     myWebView.setWebViewClient(new WebViewClient());
+                    myWebView.getSettings().setJavaScriptEnabled(true);
                     myWebView.loadUrl("http://172.16.31.18:8080/Paint.php");
+
                 }
             });
         }
@@ -67,4 +71,5 @@ public class WebForm extends AppCompatActivity {
 
         return super.onKeyDown(keyCode, event);
     }
+
 }
